@@ -1,0 +1,50 @@
+/* NavBar1.css */
+.header-container {
+    display: flex;
+    justify-content: center; /* Centers the content horizontally */
+    align-items: center; /* Centers the content vertically */
+     /* Full viewport height, adjust as needed */
+    background: #121212; /* Background color of the container, adjust as needed */
+}
+
+.header-container h1 {
+    font-family: 'Arial', sans-serif; /* Adjust the font-family as needed */
+    font-size: 3rem; /* Adjust the font size as needed */
+    font-weight: bold; /* Optional: makes the text bold */
+    background: linear-gradient(145deg, #6244fb, #0016a1); /* Gradient background */
+    -webkit-background-clip: text; /* Clips the gradient to the text */
+    -webkit-text-fill-color: transparent; /* Makes the text color transparent */
+    text-align: center; /* Centers text within the h1 element */
+    margin: 0; /* Remove default margin */
+}
+
+.loading svg polyline {
+    fill: none;
+    stroke-width: 3;
+    stroke-linecap: round;
+    stroke-linejoin: round;
+  }
+  
+  .loading svg polyline#back {
+    fill: none;
+    stroke: #01afd158;
+  }
+  
+  .loading svg polyline#front {
+    fill: none;
+    stroke: #009c17;
+    stroke-dasharray: 48, 144;
+    stroke-dashoffset: 192;
+    animation: dash_682 1.4s linear infinite;
+  }
+  
+  @keyframes dash_682 {
+    72.5% {
+      opacity: 0;
+    }
+  
+    to {
+      stroke-dashoffset: 0;
+    }
+  }
+  

@@ -1,0 +1,46 @@
+/* NavBar2.css */
+.navbar {
+    background-color: #1f1f1f; /* Dark background for the navbar */
+    color: #e0e0e0; /* Light text color */
+}
+
+.navbar-nav {
+    display: flex; /* Use flexbox to align nav items horizontally */
+    flex-direction: row; /* Align items in a row */
+    gap: 15px; /* Space between nav items */
+    margin: 0 auto; /* Center the nav items */
+    padding: 0; /* Remove default padding */
+}
+
+.navbar-collapse {
+    display: flex; /* Use flexbox to center the .navbar-nav */
+    justify-content: center; /* Center the .navbar-nav horizontally */
+    flex-grow: 1; /* Allow .navbar-collapse to take available space */
+}
+
+.nav-link {
+    font-family: 'Arial', sans-serif; /* Adjust the font-family as needed */
+    font-size: 1.1rem; /* Adjust the font size as needed */
+    font-weight: bold; /* Optional: makes the text bold */
+    background: linear-gradient(0deg, #018fe2, #00716d); /* Gradient background */
+    -webkit-background-clip: text; /* Clips the gradient to the text */
+    -webkit-text-fill-color: transparent; /* Makes the text color transparent */
+    transition: background 0.3s, color 0.3s; /* Smooth transition for the gradient */
+    text-decoration: none; /* Remove underline from links */
+}
+
+.nav-link:hover {
+    color: #ffffff !important; /* Change color on hover */
+}
+
+.nav-link.active {
+    color: #ffffff !important; /* Color for the active link */
+}
+
+.navbar-toggler {
+    border-color: #e0e0e0; /* Change color of the hamburger icon border */
+}
+
+.navbar-toggler-icon {
+    background-image: url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3E%3Cpath stroke='%23e0e0e0' stroke-width='2' d='M5 8h20M5 15h20M5 22h20'/%3E%3C/svg%3E"); /* Change color of the hamburger icon */
+}
