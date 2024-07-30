@@ -10,21 +10,22 @@ function News(props) {
 	let [articles, setArticles] = useState([]);
 	let [totalResults, setTotalResults] = useState(0);
 	let [page, setPage] = useState(1);
+	const apiKey = process.env.REACT_APP_NEWS_API_KEY;
 
 	let resultNews = useCallback(async () => {
-		const url = `https://newsapi.org/v2/top-headlines?country=in&category=${category}&page=${page}&apiKey=a9e0bf08484842a4b2d99753d25559eb`;
+		const url = `https://newsapi.org/v2/top-headlines?country=in&category=${category}&page=${page}&apiKey=${apiKey}`;
 		let data = await fetch(url);
 		let parsedData = await data.json();
 		setArticles(parsedData.articles);
 		setTotalResults(parsedData.totalResults);
-	}, [category, page]);
+	}, [category, page, apiKey]);
 
 	useEffect(() => {
 		resultNews();
 	}, [resultNews]);
 
 	let fetchData = async () => {
-		const url = `https://newsapi.org/v2/top-headlines?country=in&category=${category}&page=${page + 1}&apiKey=a9e0bf08484842a4b2d99753d25559eb`;
+		const url = `https://newsapi.org/v2/top-headlines?country=in&category=${category}&page=${page + 1}&apiKey=${apiKey}`;
 		setPage(page + 1);
 		let data = await fetch(url);
 		let parsedData = await data.json();
